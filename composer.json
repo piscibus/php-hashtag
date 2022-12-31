@@ -1,0 +1,58 @@
+{
+    "name": "piscibus/php-hashtag",
+    "description": "A simple php service for parsing hashtags from a string in any language.",
+    "type": "library",
+    "keywords": [
+        "hashtag",
+        "php",
+        "service",
+        "all languages",
+        "parse"
+    ],
+    "homepage": "https://github.com/piscibus/php-hashtag",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dhemy",
+            "email": "imdhemy@gmail.com",
+            "homepage": "https://imdhemy.com",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Mohamed Gamal",
+            "email": "mg.dev1992@gmail.com",
+            "role": "Maintainer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Piscibus\\PhpHashtag\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Piscibus\\PhpHashtag\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.18.4",
+        "vimeo/psalm": "^5.4"
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm --show-info=true --no-cache",
+        "format": "vendor/bin/php-cs-fixer fix",
+        "test": "vendor/bin/phpunit --testdox"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {},
+        "platform": {
+            "php": "8.1"
+        }
+    }
+}
