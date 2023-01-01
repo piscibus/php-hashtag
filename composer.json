@@ -39,6 +39,7 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.13",
+        "pestphp/pest": "^1.22",
         "phpunit/phpunit": "^9.5",
         "psalm/plugin-phpunit": "^0.18.4",
         "vimeo/psalm": "^5.4"
@@ -46,11 +47,13 @@
     "scripts": {
         "psalm": "vendor/bin/psalm --show-info=true --no-cache",
         "format": "vendor/bin/php-cs-fixer fix",
-        "test": "vendor/bin/phpunit --testdox"
+        "test": " vendor/bin/pest"
     },
     "config": {
         "sort-packages": true,
-        "allow-plugins": {},
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
         "platform": {
             "php": "8.1"
         }
