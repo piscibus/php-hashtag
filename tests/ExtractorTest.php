@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-use Piscibus\PhpHashtag\Extractor;
 use function PHPUnit\Framework\assertEquals;
+
+use Piscibus\PhpHashtag\Extractor;
 
 test('extract with english text', function () {
     $extractor = new Extractor();
@@ -19,7 +20,6 @@ test('extract with english text', function () {
 });
 
 test('extract with arabic text', function () {
-
     $extractor = new Extractor();
 
     $actual = $extractor->extract('هذا هو #تجربة و #تجربة2 و #foo_bar و #FooBar و #foo و #كلمة_و_أخرى');
@@ -72,6 +72,14 @@ test('extract with spanish text', function () {
 
     assertEquals(
         ['#test', '#test2', '#foo_bar', '#FooBar', '#foo', '#superpuestos'],
+        $actual
+    );
+});
+
+test('call statically', function () {
+    $actual = Extractor::extract('calling this #method #statically');
+    assertEquals(
+        ['#method', '#statically'],
         $actual
     );
 });

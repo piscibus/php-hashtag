@@ -9,7 +9,7 @@ class Extractor
     /**
      * Extract the hashtag from a string.
      */
-    public function extract(string $text): array
+    public static function extract(string $text): array
     {
         $hashtags = [];
         preg_match_all('/(#[\p{L}\d_]+)/u', $text, $matches);
@@ -19,5 +19,13 @@ class Extractor
         }
 
         return $hashtags;
+    }
+
+    /**
+     * Enable static calls.
+     */
+    public static function __callStatic(string $name, array $arguments)
+    {
+        return static::$name($arguments);
     }
 }
