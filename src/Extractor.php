@@ -7,7 +7,7 @@ namespace Piscibus\PhpHashtag;
 class Extractor
 {
     /**
-     * Extract the hashtag from a string.
+     * Extracts the hashtags from a string.
      */
     public static function extract(string $text): array
     {
@@ -19,13 +19,5 @@ class Extractor
         }
 
         return $hashtags;
-    }
-
-    /**
-     * Enable static calls.
-     */
-    public static function __callStatic(string $name, array $arguments)
-    {
-        return static::$name($arguments);
     }
 }
