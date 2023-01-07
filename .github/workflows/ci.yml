@@ -29,6 +29,6 @@ jobs:
       
     - name: "Code Format"
       run: "composer format"
-#
-#    - name: "Tests"
-#      run: "composer test"
+
+    - name: "Tests"
+      run: "composer test"
