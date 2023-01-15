@@ -22,12 +22,20 @@
             "name": "Mohamed Gamal",
             "email": "mg.dev1992@gmail.com",
             "role": "Maintainer"
+        },
+        {
+            "name": "Moemen Gaballa",
+            "email": "moemengaballa@gmail.com",
+            "role": "Maintainer"
         }
     ],
     "autoload": {
         "psr-4": {
             "Piscibus\\PhpHashtag\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -51,6 +59,7 @@
     },
     "config": {
         "sort-packages": true,
+        "platform-check": false,
         "allow-plugins": {
             "pestphp/pest-plugin": true
         },

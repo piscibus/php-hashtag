@@ -29,6 +29,10 @@ use Piscibus\PhpHashtag\Extractor;
 $text = 'This is an #English #text with #hashtags';
 
 $hashtags = Extractor::extract($text); // ['English', 'text', 'hashtags']
+
+// OR use helper function
+    
+$hashtags =  extractHashtags($text); // ['English', 'text', 'hashtags']
 ```
 
 ## License
