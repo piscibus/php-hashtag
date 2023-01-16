@@ -32,7 +32,7 @@ $hashtags = Extractor::extract($text); // ['English', 'text', 'hashtags']
 
 // OR use helper function
 
-$hashtags =  extractHashtags($text); // ['English', 'text', 'hashtags']
+$hashtags = extract_hashtags($text); // ['English', 'text', 'hashtags']
 ```
 
 ## License

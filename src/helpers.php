@@ -2,8 +2,8 @@
 
 use Piscibus\PhpHashtag\Extractor;
 
-if (! function_exists('extractHashtags')) {
-    function extractHashtags(string $text): array {
+if (! function_exists('extract_hashtags')) {
+    function extract_hashtags(string $text): array {
         return Extractor::extract($text);
     }
 }

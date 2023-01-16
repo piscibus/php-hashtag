@@ -22,11 +22,6 @@
             "name": "Mohamed Gamal",
             "email": "mg.dev1992@gmail.com",
             "role": "Maintainer"
-        },
-        {
-            "name": "Moemen Gaballa",
-            "email": "moemengaballa@gmail.com",
-            "role": "Maintainer"
         }
     ],
     "autoload": {
@@ -55,7 +50,7 @@
     "scripts": {
         "psalm": "vendor/bin/psalm --show-info=true --no-cache",
         "format": "vendor/bin/php-cs-fixer fix",
-        "test": " vendor/bin/pest"
+        "test": "vendor/bin/pest"
     },
     "config": {
         "sort-packages": true,
