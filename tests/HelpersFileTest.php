@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 
-use Piscibus\PhpHashtag\Extractor;
 use function PHPUnit\Framework\assertEquals;
 
 test('extract with english text', function () {
