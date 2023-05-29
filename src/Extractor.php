@@ -8,16 +8,13 @@ class Extractor
 {
     /**
      * Extracts the hashtags from a string.
+     *
+     * @return array<string>
      */
     public static function extract(string $text): array
     {
-        $hashtags = [];
         preg_match_all('/(#[\p{L}\d_]+)/u', $text, $matches);
 
-        foreach ($matches[0] as $match) {
-            $hashtags[] = $match;
-        }
-
-        return $hashtags;
+        return $matches[0];
     }
 }
